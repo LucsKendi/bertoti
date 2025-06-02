@@ -1,8 +1,18 @@
-public class GodClass {
+// Interface com vários métodos (má prática)
+public interface Operacao {
+    int add(int a, int b);
+    int multiply(int a, int b);
+}
+
+// GodClass implementa tudo numa classe só
+public class GodClass implements Operacao {
+
+    @Override
     public int add(int a, int b) {
         return a + b;
     }
 
+    @Override
     public int multiply(int a, int b) {
         return a * b;
     }
